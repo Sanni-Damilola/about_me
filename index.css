@@ -1,0 +1,85 @@
+html {
+    --bgcolor: green;
+    --standard-font-size: 20px;
+    --h1-font-size: calc(var(var(--standard-font-size) / 2));
+    --p-font-size: calc(var(var(--standard-font-size) * 1.5));
+    --divpadeding: 20px;
+}
+
+
+body{
+    background-color: var(--bgcolor);
+    font-size: var(--p-font-size);
+    flex-direction: column;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: calc(30px + 2em);
+}
+
+span{
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: gold;
+}
+
+ul{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+li:hover{
+    color: green;
+    background-color: red;
+    font-size: 2em;
+}
+
+#banner{
+    display: none;
+}
+
+input:focus + #banner{
+    display: block;
+    cursor: pointer;
+    color: blue;
+    font-size: 2em;
+}
+
+b{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+b:hover{
+    /* transition: all 350ms; */
+    font-size: 4em;
+    color: blueviolet;
+    background: orange;
+    padding: 11px 20px;
+    letter-spacing: 0.5em;
+}
+.animation{
+    padding: 10px;
+    cursor: pointer;
+    animation: grow 2.9s ease-in infinite alternate ;
+    margin: 0;
+}
+
+
+.name{
+    text-transform: capitalize;
+    color: white;
+    font-size: 9em;
+}
+
+@keyframes grow {
+    from { width: 100px; height: 50px; }
+    to { transform: translate(50em); }
+    /* to {transform: skewY(90deg); padding: 20px 20px; background-color: green; } */
+}
